@@ -2,17 +2,30 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-    font-weight: 100;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: var(--color-texts);
+    list-style: none;
+    text-decoration: none;
 }
 
 :root {
-    --color-texts: #FDFDFD;
+    --color-texts: #EAEAEA;
     --color-dark: #202020;
+    --color-white: #FDFDFD;
+    --color-orange: #FFA500;
+    --color-secondary: #DC143C;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-dark);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+
 
 a:visited {
     color: inherit;
@@ -21,46 +34,135 @@ a:visited {
 img {
     width: 100%;
 }
-body {
-    background-color: teal;
-    font-size: 2rem;
-}
+
+
 
 header {
     background-color: var(--color-dark);
-    height: 5vh;
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    color: var(--color-white);
+    padding: 1rem;
 }
 
 header nav {
-width: 100%;
+    width: 100%;
 }
 
 header nav ul {
+    text-align: center;
+}
+
+header nav li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+header nav a {
+    font-weight: 700;
+}
+
+
+.hero {
+    background-image: url(/assets/images/img3.jpg);
+    background-size: cover;
+    color: var(--color-white);
+    min-height: 75vh;
+    padding: 10rem 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 100;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.hero .cta-button {
+    background-color: var(--color-secondary);
+    border-radius: .5rem;
+    color: var(--color-white);
+    display: inline-block;
+    font-size: 1.5rem;
+    padding: .75rem 1.5rem;
+    margin-top: 1.5rem;
+}
+
+section:not(#home) {
+    padding: 4rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+p {
+    font-size: 1.25rem;
+}
+
+.menu_list>li {
+    background-color: var(--color-secondary);
+    border-radius: .5rem;
+    box-shadow: 0 4px 12px -4px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    margin: 1.5rem;
+    height: 28rem;
+    width: 28rem;
+    text-align: left;
+}
+
+.menu_list img {
+    border-radius: .5rem .5rem 0 0;
+    object-fit: cover;
+    width: 100%;
+}
+
+.menu_list h3,
+.menu_list p {
+    padding: 1rem 1.25rem 0;
+}
+
+#about {
+    background-image: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.8) 100%),
+        url(/assets/images/img1.jpg);
+    background-size: cover;
+    background-position: center;
+    color: var(--color-white);
+}
+
+address {
+    margin: 2rem 0;
+}
+
+address>* {
+    display: inline-block;
+    margin: 1.5rem;
+    text-align: left;
+}
+
+footer {
+    background-color: var(--color-secondary);
+    padding: 1rem;
+}
+
+/* #home {
+    height: 75vh;
+    background-image: url(/assets/images/img3.jpg);
+    background-position: top;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 1rem;
 }
 
-header nav ul li {
-}
-
-.home {
-height: 75vh;
-background-image: url(/assets/images/img3.jpg);
-background-position: top;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-}
-
-.menu {
+#menu {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -69,7 +171,9 @@ justify-content: center;
     background-color: var(--color-dark);
 }
 
-.grid_menu {
+#menu h2 {}
+
+.menu_list {
     display: grid;
     width: 50%;
     align-self: center;
@@ -78,15 +182,13 @@ justify-content: center;
     gap: 2rem;
 }
 
-.grid_menu span {
+.menu_list li {
     width: 100%;
     background-color: crimson;
     text-align: left;
 }
 
-.grid_menu span p {
- color: ;
-}
+.menu_list li p {}
 
 button {
     background-color: orange;
@@ -95,3 +197,35 @@ button {
     font-weight: bold;
     padding: 1rem;
 }
+
+#about {
+    height: 20vh;
+    background-image: url(/assets/images/img1.jpg);
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact {
+    height: 40vh;
+    background-color: var(--color-dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.contact:nth-child(even) {
+    color: blue;
+}
+
+footer {
+    background-color: crimson;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
