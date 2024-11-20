@@ -20,7 +20,7 @@ Boost your productivity with Pomo&Chill!
 </p>
 
 ## Project
-
+A simple yet useful branding website made by me while studying more about modern CSS
 
 ## Technologies
 
