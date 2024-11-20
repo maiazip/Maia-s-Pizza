@@ -1,6 +1,70 @@
-@media (max-width: 600px ) {
-.hero h1 {
+@media (max-width: 768px ) {
+#gridMenu p {
+    font-size: 1rem;
+    margin: 0.25;
+}
+
+#gridMenu h3 {
+    margin: 0.25rem;
+}
+
+#home h1 {
     font-size: 2rem;
 }
+
+#home p {
+    font-size: 1rem;
+}
+
+#home a {
+    font-size: 1rem;
+}
+
+
+
+#about p {
+    font-size: 0.9rem;
+}
+
+}
+
+@media (max-width: 600px) {
+
+    #home  a {
+        font-size: 0.8rem;
+        font-weight: bold;
+    }
+    #menu h2 {
+        font-size: 2rem;
+    }
+
+    #about h2 {
+        font-size: 2rem;
+    }
+
+    #about p {
+        font-size: 1rem;
+    }
+
+    #contact h2 {
+        font-size: 2rem;
+    }
+
+    #contact address {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    #contact > p {
+      text-align: left;
+    }
+
+    #gridMenu {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 425px) {
+
 
 }
